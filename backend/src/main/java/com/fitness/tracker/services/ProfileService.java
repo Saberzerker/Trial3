@@ -13,13 +13,13 @@ public class ProfileService {
     public User getUserById(Long id) {
         return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
     }
-
     public User updateUser(Long id, User updatedUser) {
         User existingUser = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
         existingUser.setEmail(updatedUser.getEmail());
         existingUser.setAge(updatedUser.getAge());
         existingUser.setWeight(updatedUser.getWeight());
         existingUser.setHeight(updatedUser.getHeight());
+        existingUser.setGender(updatedUser.getGender()); // Update gender
         return userRepository.save(existingUser);
     }
 }

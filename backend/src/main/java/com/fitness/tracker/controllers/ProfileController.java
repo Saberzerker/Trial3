@@ -21,4 +21,5 @@ public class ProfileController {
     public ResponseEntity<User> updateUserProfile(@PathVariable Long id, @RequestBody User user) {
         return ResponseEntity.ok(profileService.updateUser(id, user));
     }
+
 }
