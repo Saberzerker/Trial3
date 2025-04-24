@@ -14,6 +14,7 @@ public class User {
     private int age;
     private double weight; // In kilograms
     private double height; // In meters
+    private String gender; // New field
 
     // Getters and Setters
     public Long getId() {
@@ -70,5 +71,13 @@ public class User {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
